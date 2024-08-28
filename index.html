@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Store</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a2b3ab3d36.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="toggle-mune" class="toggle-mune"><i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-car"></i></div>
+        <div id="nnn" class="sidebar">
+
+            <h3 class="menu-title"> </h3>
+            <div class="sidebar-con">
+                <ul>
+                    <div class="co">
+                        <li id="categories" class="categories">Categories
+
+                            <i id="close" class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="dropdown">
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#toyota" id="toyota"><i class="fa-regular fa-circle circle-one"id="circle-one"></i>Toyota                 </a>
+                            <a href="#bmw" id="bmw"><i class="fa-regular fa-circle circle-two"id="circle-two"></i>BMW</a>
+                            <a href="#tesla" id="tesla"><i class="fa-regular fa-circle circle-three"id="circle-three"></i>Tesla</a>
+                            <a href="#jeep" id="jeep"><i class="fa-regular fa-circle circle-four"id="circle-four"></i>Jeep</a>
+                        </div>
+                    </div>
+                    </li>
+
+                    <div class="co">
+                        <li id="price" class="price">Price Range
+
+                            <i id="close2" class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="dropdown">
+                        <div id="myDropdown2" class="dropdown-content">
+                            <a href="#" id="cheep"><i class="fa-regular fa-circle circle-one"id="circle-one"></i>Less 40K$                 </a>
+                            <a href="#" id="affordable"><i class="fa-regular fa-circle circle-two"id="circle-two"></i>(80K$ - 41K$)</a>
+                            <a href="#" id="expinsive"><i class="fa-regular fa-circle circle-three"id="circle-three"></i>More 100K$</a>
+
+                        </div>
+                    </div>
+                    </li>
+
+                    <div class="co">
+                        <li id="fuel" class="fuel">Fuel Type
+
+                            <i id="close3" class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="dropdown">
+                        <div id="myDropdown3" class="dropdown-content">
+                            <a href="#diesel" id="diesel"><i class="fa-regular fa-circle circle-one"id="circle-one"></i>Diesel</a>
+                            <a href="#gasoline" id="gasoline"><i class="fa-regular fa-circle circle-two"id="circle-two"></i>Gasoline</a>
+                            <a href="#electricity" id="electricity"><i class="fa-regular fa-circle circle-three"id="circle-three"></i>Electricity</a>
+
+                        </div>
+                    </div>
+                    </li>
+
+
+                    <li class="favorites">User Favorites</li>
+                    <li class="reviews">User Reviews</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-page">
+
+            <header class="head">
+                <ul class="ul-header">
+                    <li class="home">Home</li>
+                    <li class="contact">Contact</li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" class="inp" placeholder="Search " id="search-inp">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </header>
+
+            <div class="container2">
+                <div id="con-test" class='con-test'>
+
+                    <div class="text-content">
+                        <h2 class="adver-title">Your Perfect Car Awaits! </h2>
+                        <p class="adver-par"> Discover top deals on the latest models, from luxury cars to powerful SUVs. Enjoy unbeatable prices and expert service. Visit us today for a driving experience like no other!</p>
+                        <h4 class="adver-subtitle">Your ultimate car destination! </h4>
+                    </div>
+                    <div class="home-img">
+                        <div id="rhombus" class="rhombus">
+                            <img src="./images/car.png" alt="">
+                        </div>
+                    </div>
+                    <div class="rhombus2"></div>
+                </div>
+
+                <ul id="carsList" class="cars-list">
+                    <li class="item"></li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="con-form" id="myForm">
+        <div class="form-poup">
+
+            <form action="about:blank" class="form-container">
+
+                <label for="full-name"> full Name:</label>
+                <input id="full-name" type="text" placeholder="Your Name" name="full-name" required>
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="" disabled selected>Select your country</option>
+                <option value="paletine">Paletine</option>
+                <option value="qatar">Qatar</option>
+                <option value="kuwait">Kuwait</option>
+                </select>
+
+                <label for="phone">Phone Number:</label>
+                <input id="phone" type="text" name="number" required maxlength="10" placeholder="059">
+
+                <label for="account">Bank Account Number:</label>
+                <input id="account" type="text" name="account" required maxlength="10" pattern="\d{8,20}">
+
+                <label for="inquiries">Any Inquiries:</label>
+                <textarea id="inquiries" name="inquiries" placeholder="Any Help"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
