@@ -3,6 +3,30 @@ body {
   margin: 0;
 }
 
+.header-container {
+  margin-bottom: 30px;
+  display: flex;
+  width: 100%;
+  background-color: blue;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-container h2 {
+  color: white;
+}
+#close6 {
+  border-radius: 3px;
+  display: flex;
+  width: 20px;
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
 .review-container {
   padding-left: 20px;
   padding-right: 20px;
@@ -48,4 +72,31 @@ body {
 
 .icons {
   flex-direction: row;
+}
+
+.fa-star.one,
+.fa-star.two,
+.fa-star.three {
+  color: yellow;
+}
+
+.fa-star.five {
+  color: gainsboro;
+}
+
+.oneB .fa-star.four,
+.oneB .fa-star.five {
+  color: yellow;
+}
+
+.twoB .fa-star.four {
+  color: yellow;
+}
+
+.threeB .fa-star.four {
+  color: yellow;
+}
+.fourB .fa-star.four,
+.fourB .fa-star.five {
+  color: gainsboro;
 }

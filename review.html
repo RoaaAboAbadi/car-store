@@ -6,16 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/review.css">
-    <script src="https://kit.fontawesome.com/a2b3ab3d36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://kit.fontawesome.com/a2b3ab3d36.js" crossorigin="anonymous"></script>
 
     <title>User Review</title>
 </head>
 
 <body>
 
-    <div class="review-container">
-        <div class="review-box">
+    <header>
+        <div class="header-container">
+            <h2>User Reviews</h2>
+            <i id="close6" class="fa-solid fa-x"></i>
+        </div>
+    </header>
+    <div id="review-container" class="review-container">
+        <div class="review-box oneB">
             <div class="icons-image-container">
                 <div class="image-name-container">
                     <img class="review-img" src="./images/kris.jpg" width="80" height="80">
@@ -25,11 +32,11 @@
                     </div>
                 </div>
                 <div class="icons">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-star one"></i>
+                    <i class="fa-solid fa-star two"></i>
+                    <i class="fa-solid fa-star three"></i>
+                    <i class="fa-solid fa-star four"></i>
+                    <i class="fa-solid fa-star five"></i>
                 </div>
             </div>
             <div class="review-content">
@@ -39,7 +46,7 @@
             </div>
         </div>
 
-        <div class="review-box">
+        <div class="review-box twoB">
             <div class="icons-image-container">
                 <div class="image-name-container">
                     <img class="review-img" src="./images/kris.jpg">
@@ -49,11 +56,11 @@
                     </div>
                 </div>
                 <div class="icons">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-star one"></i>
+                    <i class="fa-solid fa-star two"></i>
+                    <i class="fa-solid fa-star three"></i>
+                    <i class="fa-solid fa-star four"></i>
+                    <i class="fa-solid fa-star five"></i>
                 </div>
             </div>
             <div class="review-content">
@@ -63,7 +70,7 @@
             </div>
         </div>
 
-        <div class="review-box">
+        <div class="review-box threeB">
             <div class="icons-image-container">
                 <div class="image-name-container">
                     <img class="review-img" src="./images/kris.jpg">
@@ -73,11 +80,11 @@
                     </div>
                 </div>
                 <div class="icons">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-star one"></i>
+                    <i class="fa-solid fa-star two"></i>
+                    <i class="fa-solid fa-star three"></i>
+                    <i class="fa-solid fa-star four"></i>
+                    <i class="fa-solid fa-star five"></i>
                 </div>
             </div>
             <div class="review-content">
@@ -87,7 +94,7 @@
             </div>
         </div>
 
-        <div class="review-box">
+        <div class="review-box fourB">
             <div class="icons-image-container">
                 <div class="image-name-container">
                     <img class="review-img" src="./images/kris.jpg">
@@ -97,11 +104,11 @@
                     </div>
                 </div>
                 <div class="icons">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-star one"></i>
+                    <i class="fa-solid fa-star two"></i>
+                    <i class="fa-solid fa-star three"></i>
+                    <i class="fa-solid fa-star four"></i>
+                    <i class="fa-solid fa-star five"></i>
                 </div>
             </div>
             <div class="review-content">
@@ -111,6 +118,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const close6 = document.getElementById("close6");
+
+        close6.addEventListener("click", function (e) {
+            window.location.href = "./index.html";
+        });
+    </script>
 </body>
 
 </html>

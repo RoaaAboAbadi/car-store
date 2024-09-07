@@ -5,8 +5,10 @@ const errorName = document.getElementById("error");
 const errorPassword = document.getElementById("errorPassword");
 
 form.addEventListener("submit", (e) => {
+    e.preventDefault(); // prevent refresh
 
-
+    errorName.innerHTML = '';
+    errorPassword.innerHTML = '';
     let message = [];
 
     if (fname.value === "" || fname.value == null) {
@@ -22,7 +24,7 @@ form.addEventListener("submit", (e) => {
     }
 
     if (message.length > 0) {
-        e.preventDefault(); // prevent refresh
+
 
         if (message.includes('Name is required')) {
             errorName.innerHTML = 'Name is required';
@@ -41,7 +43,17 @@ form.addEventListener("submit", (e) => {
         if ((fname.value.toLowerCase() == "admin") && (password.value == "123123123")) {
             console.log('admin credentials are correct');
             window.location.href = "./admin.html";
-        } else {
+        }
+        else if (fname.value.toLowerCase() !== "admin") {
+            console.log("Incorrect User Name")
+            errorName.innerHTML = 'Incorrect User Name';
+        }
+
+        else if (password.value != "123123123") {
+            console.log("Incorrect Password")
+            errorPassword.innerHTML = 'Incorrect Password';
+        }
+        else {
             e.preventDefault();
             console.log('incorrect admin credentials');
         }
