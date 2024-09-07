@@ -10,146 +10,19 @@ let fuel = document.getElementById("fuel");
 let dropdownContent3 = document.getElementById("myDropdown3");
 let close3 = document.getElementById("close3");
 
+let reviews = document.getElementById("reviews");
+let dropdownContent4 = document.getElementById("myDropdown4");
+let close4 = document.getElementById("close4");
+
+let admin = document.getElementById("admin");
+let dropdownContent5 = document.getElementById("myDropdown5");
+let close5 = document.getElementById("close5")
 
 const sidebar = document.getElementById("nnn");
 const openSideBar = document.getElementById("toggle-mune");
 
-const arr = [{
-  id: "toyota-one",
-  carName: "Toyota",
-  img: "./images/toyota-carrol.png",
-  disciption: "The Toyota Corolla is a reliable, fuel-efficient compact sedan with a modern design and advanced safety features, and it is available with a diesel , electric engine option.",
-  cost: 30000,
-  btn: "Buy Now",
-  speed: "Speed: 180km/h",
-},
-{
-  id: "toyota-two",
-  carName: "Toyota",
-  img: "./images/toyota-corrola.png",
-  disciption: "The Toyota Corolla is a reliable, fuel-efficient compact sedan with a modern design and advanced safety features, and it is available with an electric engine option.",
-  cost: 35000,
-  btn: "Buy Now",
-  speed: "Speed: 180km/h",
-},
-{
-  id: "toyota-three",
-  carName: "Toyota",
-  img: "./images/toyota.png",
-  disciption: "The Toyota Corolla is a reliable, fuel-efficient compact sedan with a modern design and advanced safety features, and it is available with a diesel engine option.",
-  cost: 40000,
-  btn: "Buy Now",
-  speed: "Speed: 180km/h",
-},
-{
-  id: "tesla-one",
-  carName: "Tesla",
-  img: "./images/tesla3.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with an electric engine option, and it is available with a Electricity engine option.",
-  cost: 50000,
-  btn: "Buy Now",
-  speed: "Speed: 225km/h",
-},
-{
-  id: "tesla-two",
-  carName: "Tesla",
-  img: "./images/tesla4.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with an electric engine option.",
-  cost: 44000,
-  btn: "Buy Now",
-  speed: "Speed: 225km/h",
-},
-{
-  id: "tesla-three",
-  carName: "Tesla",
-  img: "./images/tesla2.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with an electric engine option.",
-  cost: 40000,
-  btn: "Buy Now",
-  speed: "Speed: 225km/h",
-},
-{
-  id: "tesla-four",
-  carName: "Tesla",
-  img: "./images/tesla1.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with an electric engine option.",
-  cost: 35000,
-  btn: "Buy Now",
-  speed: "Speed: 2225km/h",
-},
-{
-  id: "bmw-one",
-  carName: "BMW",
-  img: "./images/bmw5.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with a gasoline and diesel engine option.",
-  cost: 50000,
-  btn: "Buy Now",
-  speed: "Speed: 2225km/h",
-},
-{
-  id: "bmw-two",
-  carName: "BMW",
-  img: "./images/bmw2.webp",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with a gasoline and electric engine option.",
-  cost: 60000,
-  btn: "Buy Now",
-  speed: "Speed: 2225km/h",
-},
-{
-  id: "bmw-three",
-  carName: "BMW",
-  img: "./images/bmw3.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with a diesel engine option.",
-  cost: 55000,
-  btn: "Buy Now",
-  speed: "Speed: 2225km/h",
-},
-{
-  id: "bmw-four",
-  carName: "BMW",
-  img: "./images/bmw4.png",
-  disciption: "The Tesla Model 3 is a stylish electric car with advanced tech, and it is available with a gasoline , diesel and electric engine option.",
-  cost: 70000,
-  btn: "Buy Now",
-  speed: "Speed: 2225km/h",
-},
-{
-  id: "jeep-one",
-  carName: "Jeep",
-  img: "./images/jeep1.png",
-  disciption: "The Mercedes-Benz G-Class (G-Wagon) is a luxury SUV known for its boxy design and strong off-road performance, and it is available with a gasoline , diesel and electric engine option.",
-  cost: 150000,
-  btn: "Buy Now",
-  speed: "Speed: 220 km/h",
-},
-{
-  id: "jeep-two",
-  carName: "Jeep",
-  img: "./images/jeep2.png",
-  disciption: "The Range Rover is a luxury SUV from Land Rover known for its elegant design, upscale interior, and strong off-road capabilities. It offers excellent performance and superior driving comfort, and it is available with a gasoline , diesel and electric engine option.",
-  cost: 110000,
-  btn: "Buy Now",
-  speed: "Speed: 200 km/h",
-},
-{
-  id: "jeep-three",
-  carName: "Jeep",
-  img: "./images/jeep3.png",
-  disciption: "The Jeep is a rugged SUV with strong off-road abilities and a durable design, perfect for adventure and city driving, and it is available with a gasoline  and electric engine option.",
-  cost: 80000,
-  btn: "Buy Now",
-  speed: "Speed: 125km/h",
-},
-{
-  id: "jeep-four",
-  carName: "Jeep",
-  img: "./images/jeep4.png",
-  disciption: "The Jeep is a rugged SUV with strong off-road abilities and a durable design, perfect for adventure and city driving, and it is available with a gasoline , diesel  engine option.",
-  cost: 40000,
-  btn: "Buy Now",
-  speed: "Speed: 140km/h",
-},
-];
+import { arr } from './cars.data.js';
+import { displayCars } from './displayCarsFun.js';
 
 const closeSideBar = () => {
   sidebar.classList.toggle("sidebar-test");
@@ -192,6 +65,29 @@ fuelDropdwonList.forEach((dropdown) => {
 
 })
 
+
+reviews.addEventListener("click", function () {
+  dropdownContent4.classList.add("active");
+  console.log("hhhhh");
+});
+
+close4.addEventListener("click", function (e) {
+  dropdownContent4.classList.remove("active");
+  console.log("kkkk222");
+  e.stopPropagation();
+});
+
+
+admin.addEventListener("click", function () {
+  dropdownContent5.classList.add("active");
+  console.log("hhhhh");
+});
+
+close5.addEventListener("click", function (e) {
+  dropdownContent5.classList.remove("active");
+  console.log("kkkk222");
+  e.stopPropagation();
+});
 
 console.log("22222222222222222222222222222");
 
@@ -262,30 +158,7 @@ document.getElementById("search-inp").addEventListener("input", function () {
   document.getElementById("con-test").classList.add("ree");
 });
 
-let carsList = document.getElementById("carsList");
 
-function updateList(arr) {
-  carsList.innerHTML = "";
-
-  arr.forEach((car) => {
-    let list = document.createElement("li");
-    list.classList.add("item");
-
-    list.innerHTML = `<div class="box"> <h3 class="title-car">${car.carName}</h3>  <br>
-         <div class="cont"><div><img class="image" src='${car.img}' alt='${car.carName}' /> </div> <br>
-         <div class="togather"> <p class="discription"> ${car.disciption} </p> <br>
-          <div class="togather2" ><p class="speed">${car.speed}</p> <span class="cost"> Cost: ${car.cost}$</span> 
-           <button class="btn trt">${car.btn}</button> </div></div></div></div>`;
-
-    carsList.appendChild(list);
-  });
-  document.querySelectorAll(".trt").forEach((button) => {
-    button.addEventListener("click", function () {
-      document.getElementById("myForm").style.display = "flex";
-      console.log("ccc");
-    });
-  });
-}
 
 function searchCar(brand) {
   let searched = (
@@ -296,7 +169,7 @@ function searchCar(brand) {
     car.carName.toLowerCase().includes(searched)
   );
 
-  updateList(filtered);
+  displayCars(filtered);
 }
 
 // type ==> // cheep   // affordable  // expinsive
@@ -313,7 +186,7 @@ const priceListFilter = (type) => {
     return condation;
   });
 
-  updateList(search);
+  displayCars(search);
 };
 
 const searchFuelFilter = (type) => {
@@ -328,6 +201,6 @@ const searchFuelFilter = (type) => {
     }
     return condistion
   })
-  updateList(searchFuel)
+  displayCars(searchFuel)
 }
 
