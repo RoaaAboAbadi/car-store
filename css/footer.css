@@ -1,0 +1,85 @@
+footer {
+  background-color: #343434;
+  color: white;
+  padding: 40px 0 0 0;
+}
+
+footer li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+}
+
+.footer-content p a,
+.footer-content address a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content address {
+  margin-top: 35px;
+}
+
+.footer-content p,
+.footer-content address {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-content ul {
+  text-align: center;
+}
+
+.list li {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  height: 2px;
+  width: 0;
+  background-color: #001667;
+  transition-duration: 0.5s;
+}
+
+.list li:hover::before {
+  width: 70px;
+}
+
+.footer-content i {
+  font-size: 25px;
+}
+
+.bottom-bar {
+  background-color: #1743e3;
+  text-align: center;
+  padding: 5px;
+}
+
+.bottom-bar p {
+  padding: 0 5px;
+  font-size: 17px;
+  color: white;
+}

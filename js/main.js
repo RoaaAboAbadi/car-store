@@ -34,7 +34,7 @@ openSideBar.addEventListener("click", (e) => {
   closeSideBar();
 });
 
-const removeContaner = () => {
+const removeContainer = () => {
   document.getElementById("con-test").classList.add("ree");
 };
 
@@ -49,9 +49,9 @@ close3.addEventListener("click", function (e) {
   console.log("kkkk222");
   e.stopPropagation();
 });
-const fuelDropdwonList = document.querySelectorAll("#myDropdown3 > a");
+const fuelDropdownList = document.querySelectorAll("#myDropdown3 > a");
 
-fuelDropdwonList.forEach((dropdown) => {
+fuelDropdownList.forEach((dropdown) => {
   dropdown.addEventListener("click", function () {
     document.querySelectorAll(".fa-circle").forEach((circle) => {
       circle.classList.remove("colored");
@@ -60,7 +60,7 @@ fuelDropdwonList.forEach((dropdown) => {
 
     searchFuelFilter(dropdown.id);
     closeSideBar();
-    removeContaner();
+    removeContainer();
   });
 
 })
@@ -103,16 +103,16 @@ close.addEventListener("click", function (e) {
 });
 const categoriesDropdownList = document.querySelectorAll("#myDropdown > a");
 
-categoriesDropdownList.forEach((dropdwon) => {
-  dropdwon.addEventListener("click", function () {
+categoriesDropdownList.forEach((dropdown) => {
+  dropdown.addEventListener("click", function () {
     document.querySelectorAll(".fa-circle").forEach((circle) => {
       circle.classList.remove("colored");
     });
-    dropdwon.firstChild.classList.add("colored");
+    dropdown.firstChild.classList.add("colored");
 
-    searchCar(dropdwon.id);
+    searchCar(dropdown.id);
     closeSideBar();
-    removeContaner();
+    removeContainer();
   });
 });
 
@@ -130,12 +130,6 @@ close2.addEventListener("click", function (e) {
 });
 const priceRangeDropdownList = document.querySelectorAll("#myDropdown2 > a");
 
-// they are the same
-// let cheep = document.getElementById("cheep");
-//let affordable = document.getElementById("affordable");
-//let expinsive = document.getElementById("expinsive");
-
-// console.log(priceRangeDropdownList, "priceRangeDropdownList");
 
 priceRangeDropdownList.forEach((dropdown) => {
   dropdown.addEventListener("click", function () {
@@ -145,7 +139,7 @@ priceRangeDropdownList.forEach((dropdown) => {
     dropdown.firstChild.classList.add("colored");
 
     priceListFilter(dropdown.id);
-    removeContaner();
+    removeContainer();
     closeSideBar();
   });
   console.log("dropdown", dropdown);
@@ -191,15 +185,15 @@ const priceListFilter = (type) => {
 
 const searchFuelFilter = (type) => {
   const searchFuel = arr.filter((car) => {
-    let condistion;
+    let condition;
     if (type === "diesel") {
-      condistion = car.disciption.includes("diesel")
+      condition = car.description.includes("diesel")
     } else if (type === "electric") {
-      condistion = car.disciption.includes("electric")
+      condition = car.description.includes("electric")
     } else {
-      condistion = car.disciption.includes("gasoline")
+      condition = car.description.includes("gasoline")
     }
-    return condistion
+    return condition
   })
   displayCars(searchFuel)
 }

@@ -1,4 +1,4 @@
-console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+
 import { displayCars } from "./displayCarsFun.js";
 import { arr } from './cars.data.js'
 
@@ -8,30 +8,32 @@ const saveFormAdmin = document.getElementById("save");
 const forrm = document.getElementById("forrm");
 const myForm = document.getElementById("myForm");
 const newCost = document.getElementById("new-cost");
-const newSpead = document.getElementById("new-spead");
-const newDiscription = document.getElementById("new-discription");
+const newSpeed = document.getElementById("new-speed");
+const newDescription = document.getElementById("new-description");
 
 
 
-const onSavahandler = (e) => {
+const onSaveHandler = (e) => {
     e.preventDefault();
-    const id = document.curntUpdatedCarId;
+    let id = document.currentUpdatedCarId;
 
-    updateCar(id, newSpead, newCost, newDiscription)
+    updateCar(id, newSpeed.value, newCost.value, newDescription.value)
+
+    displayCars(arr)
 
     myForm.style.display = "none";
     alert("The Data Has Changed !")
 }
 
-forrm.addEventListener("submit", onSavahandler);
+forrm.addEventListener("submit", onSaveHandler);
 
-function updateCar(id, newSpead, newCost, newDiscription) {
+function updateCar(id, newSpeed, newCost, newDescription) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].id == id) {
-            arr[i].cost = newCost.value;
-            arr[i].speed = newSpead.value;
-            arr[i].disciption = newDiscription.value;
-            console.log("newCost", newCost.value)
+            arr[i].cost = newCost;
+            arr[i].speed = newSpeed;
+            arr[i].description = newDescription;
+            console.log("newCost", newCost, id,)
             return;
         }
     }
